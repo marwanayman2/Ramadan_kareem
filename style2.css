@@ -150,15 +150,16 @@ section h2:before {
 		top: -20px;
 
 	}
-	h3 { font-size: 22px; }
+	h3 { font-size: 20px; }
 	.mosque {	
-		bottom: 10;
+		bottom: 5px;
 		height: 600px;
 		background-size: 1200px;
 	}
 
 	.mosque:before {
-		bottom: 10;
+		
+		bottom: 5px;
 		height: 750px;
 		background-size: 1500px;
 	}

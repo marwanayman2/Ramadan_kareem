@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Tangerine', cursive;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+.text {
+	margin-bottom: 200px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 25px;
+	letter-spacing: 1px;
+}
+.username {
+    direction: ltr; /* يخلي الاسم يفضل بنفس اتجاه اللغة المكتوب بيها */
+    unicode-bidi: embed; /* يضمن إن النص العربي حواليه ميتأثرش */
+    display: inline-block; /* يمنع تأثير الاتجاه على باقي الجملة */
+}
+
+h3 {
+	font-size: 25px;
+	font-family: sans-serif;
+	text-align: center;
+}
+.text4{
+	font-family: "Amiri Quran", serif;
+	color:#810af7fe	;
+}
+.text4 span{
+		font-family: "Amiri Quran", serif;
+
+}
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(#ffeb3b, #e91e63);
+	overflow: hidden;
+}
+
+section h2 {
+	position: relative;
+	text-align: center;
+	font-size: 120px;
+	color: #fff;
+	text-shadow: 0 5px 80px rgba(0, 0, 0, 0.2);
+}
+
+section h2:before {
+	content: '';
+	position: absolute;
+	top: -30px;
+	left: -70px;
+	width: 150px;
+	height: 150px;
+	background: transparent;
+	border-left: 10px solid #fff;
+	border-radius: 50%;
+	transform: rotate(-30deg);
+	box-shadow: -10px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mosque {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	background: url('mosque.png');
+	background-repeat: repeat-x;
+	background-size: 900px;
+	z-index: 1;
+	pointer-events: none;
+	animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0px;
+	}
+	100% {
+		background-position: 900px;
+	}
+}
+
+.mosque:before {
+	content: '';	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 500px;
+	background: url('mosque.png');
+	background-repeat: repeat-x;
+	background-size: 1200px;
+	z-index: 1;
+	pointer-events: none;
+	opacity: 0.1;
+	animation: animateReverse 30s linear infinite;
+}
+
+@keyframes animateReverse {
+	0% {
+		background-position: 1200px;
+	}
+	100% {
+		background-position: 0px;
+	}
+}
+
+.particles-js-canvas-el {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* 📌 ميديا كويري للموبايلات */
+@media (max-width: 768px) {
+	.text {
+		width: 100%;
+		margin-top: -130px;
+		margin-bottom: 80px;
+	}
+	section h2 { 
+		font-size: 75px;
+		left: 12px;
+	}
+	section h2:before{	
+		width: 110px;
+		height: 110px;
+		left: 0px;
+	}
+	h3 { font-size: 22px; }
+	.mosque {	
+		height: 600px;
+		background-size: 1200px;
+	}
+
+	.mosque:before {
+		height: 750px;
+		background-size: 1500px;
+	}
+
+}
+
+/* 📌 ميديا كويري للشاشات الأصغر */
+@media (max-width: 480px) {
+	.text {
+		margin-bottom: 80px;
+	}
+
+	.mosque {
+		height: 150px;
+		background-size: 500px;
+	}
+
+	.mosque:before {
+		height: 250px;
+		background-size: 800px;
+	}
+
+}

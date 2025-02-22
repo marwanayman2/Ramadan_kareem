@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amiri+Quran&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal:wght@300&display=swap" rel="stylesheet">
+<title>Ramadan Kareem</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+    <div id="moon" class="fade-in"></div>
+    <div id="main-star" class="fade-in">
+        <div class="star-five rotating"></div>
+    </div>
+    <div class="constellations">
+        <div class="constellation rotating-slow">
+        <div class="baby-star">
+            <div class="star-five rotating"></div>
+        </div>
+        <div class="baby-star">
+            <div class="star-five rotating"></div>
+        </div>
+        <div class="baby-star">
+            <div class="star-five rotating"></div>
+        </div>
+        <div class="baby-star">
+            <div class="star-five rotating"></div>
+        </div>
+        </div>
+        <div id="angled">
+        <div class="constellation rotating-slow">
+            <div class="baby-star">
+            <div class="star-five rotating"></div>
+            </div>
+            <div class="baby-star">
+            <div class="star-five rotating"></div>
+            </div>
+            <div class="baby-star">
+            <div class="star-five rotating"></div>
+            </div>
+            <div class="baby-star">
+            <div class="star-five rotating"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="text slide-up"> لو الموقع ده اتبعتلك فانا بعزك فاكتب اسمك </div>
+    <div class="text slide-up2" id="m1">
+        <input type="text" placeholder="Enter Name" id="name">
+        <button onclick="saveName()">Enter</button>
+        </div>
+    </div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <script>
+        function saveName() {
+          var name = document.getElementById('name').value;
+          if (name === "") {
+            alert('لا خليك جميل و اكتب اسمك انت هطنش ولا ايه؟ ');
+          } else {
+            localStorage.setItem('username', name); 
+            window.location.href = "index2.html";  
+          }
+        }
+            window.onload = function() {
+            localStorage.removeItem('username');
+            document.getElementById('name').value = "";
+        };
+      </script>
+    <script src="app.js"></script>
+</body>
+</html>

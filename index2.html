@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ramadan Kareem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amiri+Quran&display=swap" rel="stylesheet">	
+  <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+	<section id="particles-js">
+		<div class="text">
+			<h1 class="text4"><span>من مروان ليك انت و بس</span></h1>
+			<h2>رمضان كريم</h2>
+			<h3 class="text4">كل سنة و انت طيب يا <span id="addname" class="username" id="username"></span> و رمضان كريم عليك</h3>
+			<h3 class="text4"> <span style="color: red;">❤❤</span> و على اهل بيتك </h3>		
+			<div class="mosque"></div>	
+		</div>
+	</section>
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+  <script>
+    window.onload = function () {
+        var name = localStorage.getItem('username');
+        if (name) {
+            var addname = document.getElementById('addname');
+            addname.innerText = name;
+
+            // ✅ ضبط الاتجاه إذا كان الاسم إنجليزيًا
+            if (/^[A-Za-z\s]+$/.test(name)) {
+                addname.style.direction = "ltr";
+                addname.style.unicodeBidi = "embed";
+                addname.style.display = "inline-block";
+            }
+        }
+    };
+</script>
+</body>
+</html>

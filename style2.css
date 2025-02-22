@@ -137,8 +137,11 @@ section h2:before {
 	.text {
 		width: 100%;
 		margin-top: -130px;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 	}
+	section {
+	height: 90vh;
+}
 	section h2 { 
 		font-size: 70px;
 		left: 12px;
@@ -150,14 +153,15 @@ section h2:before {
 		top: -20px;
 
 	}
-	h3 { font-size: 20px; }
+	h3 { font-size: 22px; }
 	.mosque {	
+		bottom: 5;
 		height: 600px;
 		background-size: 1200px;
 	}
 
 	.mosque:before {
-		
+		bottom: 5;
 		height: 750px;
 		background-size: 1500px;
 	}

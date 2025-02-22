@@ -152,13 +152,13 @@ section h2:before {
 	}
 	h3 { font-size: 22px; }
 	.mosque {	
-		bottom: 5;
+		bottom: 10;
 		height: 600px;
 		background-size: 1200px;
 	}
 
 	.mosque:before {
-		bottom: 5;
+		bottom: 10;
 		height: 750px;
 		background-size: 1500px;
 	}

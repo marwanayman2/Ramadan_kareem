@@ -143,6 +143,9 @@ section h2:before {
 		font-size: 75px;
 		left: 12px;
 	}
+	section{
+		height: 90vh;
+	}
 	section h2:before{	
 		width: 110px;
 		height: 110px;

@@ -17,12 +17,12 @@
 			<h2>رمضان كريم</h2>
 			<h3 class="text4">كل سنة و انت طيب يا <span id="addname" class="username" id="username"></span> و رمضان كريم عليك</h3>
 			<h3 class="text4"> <span style="color: red;">❤❤</span> و على اهل بيتك </h3>		
+			<div class="mosque"></div>	
 		</div>
-		<div class="mosque"></div>
 	</section>
   <script src="particles.js"></script>
   <script src="app.js"></script>
-  <script>
+<script>
     window.onload = function () {
         var name = localStorage.getItem('username');
         if (name) {
@@ -36,6 +36,10 @@
                 addname.style.display = "inline-block";
             }
         }
+		    // Scroll to the bottom smoothly
+			setTimeout(() => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }, 500); // Delay for smoother effect
     };
 </script>
 </body>
